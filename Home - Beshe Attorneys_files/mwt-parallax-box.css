@@ -1,0 +1,77 @@
+/*
+** Parallax
+*/
+
+.mwt-parallax-box-scene {
+    position: relative;
+}
+
+.mwt-parallax-box-scene .scene.mwt-parallax-box-layers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.scene.mwt-parallax-box-layers .mwt-parallax-box-layer {
+    position: absolute !important;
+}
+
+.scene.mwt-parallax-box-layers .mwt-parallax-box-layer.scene-top-left {
+    top: 0 !important;
+}
+
+.scene.mwt-parallax-box-layers .mwt-parallax-box-layer.scene-top-right {
+    top: 0 !important;
+    left: auto !important;
+    right: 0;
+}
+
+.scene.mwt-parallax-box-layers .mwt-parallax-box-layer.scene-bottom-left {
+    top: auto !important;
+    bottom: 0;
+}
+
+.scene.mwt-parallax-box-layers .mwt-parallax-box-layer.scene-bottom-right {
+    top: auto !important;
+    bottom: 0;
+    left: auto !important;
+    right: 0;
+}
+ 
+.mwt-parallax-box-scene .mwt-parallax-box-images-wrap {
+    position: relative;
+    display: inline-block;
+}
+  
+.mwt-parallax-box-scene .mwt-parallax-box-images-wrap img.mwt-parallax-box-image-front {
+    position: relative;
+    z-index: 6;
+}
+
+.mwt-parallax-box-scene .mwt-parallax-box-images-wrap img.mwt-parallax-box-image-back {
+    position: absolute;
+    z-index: 0;
+    transition: 0.3s ease-in-out;
+}
+      
+.mwt-parallax-box-scene .mwt-parallax-box-images-wrap {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.mwt-parallax-box-scene .mwt-parallax-box-images-wrap img.mwt-parallax-box-image-back {
+    left: -30px;
+    top: -30px;
+}
+
+@media (min-width: 992px) {
+    .mwt-parallax-box-scene .mwt-parallax-box-images-wrap:hover img.mwt-parallax-box-image-back {
+        transform: translateX(-5%);
+    }
+}
+     
