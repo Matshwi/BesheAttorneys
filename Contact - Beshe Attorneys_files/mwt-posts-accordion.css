@@ -1,0 +1,226 @@
+.mwt-posts-accordion-container,
+.mwt-posts-accordion-container i {
+    color: #000;
+}
+
+.mwt-posts-accordion-container svg {
+    fill: #000;
+    max-width: 1em;
+    max-height: 1em;
+}
+
+.mwt-posts-accordion-image-item-title,
+.mwt-posts-accordion-nav-item-title {
+    margin: 0;
+}
+
+.mwt-posts-accordion-container {
+    display: flex;
+    gap: 30px;
+}
+
+@media (max-width:767px) {
+    .mwt-posts-accordion-container {
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width:768px) {
+    .mwt-posts-accordion-container>div {
+        width: 50%;
+    }
+}
+
+/* Results Section  */
+.mwt-posts-accordion-images {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    min-height: 100%;
+}
+
+.mwt-posts-accordion-image-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transition: all .4s ease;
+    transition-delay: .4s;
+}
+
+.mwt-posts-accordion-image-item.active {
+    position: relative;
+    height: 100%;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+}
+
+.mwt-posts-accordion-image-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent; 
+    opacity: 0;
+}
+
+.mwt-posts-accordion-image-item.active::before {
+    opacity: 1;
+}
+
+.mwt-posts-accordion-image-item img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+
+.mwt-posts-accordion-image-item.active img {
+    opacity: 1;
+}
+
+.mwt-posts-accordion-image-item-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    opacity: 0;
+}
+
+.mwt-posts-accordion-image-item.active .mwt-posts-accordion-image-item-content {
+    opacity: 1;
+}
+
+/* Date */
+.mwt-posts-accordion-image-item-date,
+.mwt-posts-accordion-nav-item-date {
+    min-width: 70px;
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.mwt-posts-accordion-image-item-date>span,
+.mwt-posts-accordion-nav-item-date>span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.mwt-posts-accordion-image-item .mwt-posts-accordion-image-item-date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.mwt-posts-accordion-image-item.active .mwt-posts-accordion-image-item-date {
+    opacity: 1;
+}
+
+/* Navigation Section */
+.mwt-posts-accordion-nav-item-top-wrap,
+.mwt-posts-accordion-nav-item-excerpt div {
+    border: 1px solid #000;
+}
+
+.mwt-posts-accordion-nav-item-excerpt div {
+    border-top: 0;
+}
+
+.mwt-posts-accordion-nav-item-content {
+    width: 100%;
+    padding: 10px;
+}
+
+.mwt-posts-accordion-nav-item-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.mwt-posts-accordion-nav-item.active .mwt-posts-accordion-nav-item-title {
+    cursor: not-allowed;
+    pointer-events: none;
+} 
+
+.mwt-posts-accordion-nav-item-excerpt {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transition: all .3s ease-in-out;
+}
+
+.mwt-posts-accordion-nav-item.active .mwt-posts-accordion-nav-item-excerpt {
+    opacity: 1;
+    visibility: visible;
+    max-height: 200px;
+    transition: all .4s ease-in-out;
+}
+
+.mwt-posts-accordion-nav-item-excerpt div {
+    padding: 10px;
+}
+
+.mwt-posts-accordion-nav-item-top-wrap {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.mwt-posts-accordion-image-item-footer,
+.mwt-posts-accordion-nav-item-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.mwt-posts-accordion-image-item-footer>*:first-child,
+.mwt-posts-accordion-nav-item-footer>*:first-child {
+    margin-right: auto;
+}
+
+.mwt-posts-accordion-image-item-date-animation,
+.mwt-posts-accordion-image-item-content-animation {
+    visibility: hidden;
+}
+
+/* animation duration */
+.animated.fast {
+	-webkit-animation-duration: 800ms;
+	animation-duration: 800ms;
+}
+  
+.animated.faster {
+	-webkit-animation-duration: 500ms;
+	animation-duration: 500ms;
+}
+  
+.animated.slow {
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+}
+  
+.animated.slower {
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+}
