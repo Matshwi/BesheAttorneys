@@ -1,0 +1,47 @@
+/* Countdown */
+.mwt-countdown-container .comingsoon-countdown {
+    text-align: center;
+}
+  
+.mwt-countdown-container .comingsoon-countdown:before,
+.mwt-countdown-container .comingsoon-countdown:after {
+    clear: both;
+    display: table;
+    content: ' ';
+}
+  
+.mwt-countdown-container .countdown-row {
+    clear: both;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: center;
+}
+  
+.mwt-countdown-container .countdown-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid #000;
+    padding: 20px;
+}
+  
+.mwt-countdown-container .countdown-amount {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1;
+    color: #000;
+}
+  
+.mwt-countdown-container .countdown-period {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    color: #000;
+}
+  
+.mwt-countdown-container .countdown-descr {
+    display: block;
+}

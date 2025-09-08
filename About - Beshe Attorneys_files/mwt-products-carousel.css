@@ -1,0 +1,126 @@
+.mwt-products-carousel .owl-carousel.owl-loaded {
+    overflow: visible;
+}
+
+.mwt-products-carousel ul.products,
+.mwt-products-carousel ul.products li.product {
+    margin-bottom: 0 !important;
+}
+
+.mwt-products-carousel-container .woocommerce.columns-1 ul.products li.product {
+    width: 100%;
+    margin-right: 0;
+}
+
+.mwt-products-carousel-container .product-thumbnail-wrap>a {
+    position: relative;
+    z-index: 1;
+}
+
+.mwt-products-carousel-container .product-thumbnail-wrap>a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: -1;
+}
+
+/* prev/next */
+.mwt-products-carousel-container .owl-nav {
+    display: flex;
+    z-index: 3;
+}
+
+.mwt-products-carousel-container .owl-nav button {
+    display: inline-flex;
+}
+
+.mwt-products-carousel-container .owl-nav button svg {
+    max-width: 1em;
+    max-height: 1em;
+    display: block;
+}
+
+.mwt-products-carousel-container .owl-nav button>span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mwt-products-carousel-container {
+    position: relative;
+}
+
+.mwt-products-carousel-container .owl-nav.position-middle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+[id*="mwt-products-carousel-nav-"].disabled {
+	display: none;
+}
+
+[id*="mwt-products-carousel-nav-"] button.disabled {
+	cursor: not-allowed;
+}
+
+/* dots */
+.mwt-products-carousel-container .owl-carousel .owl-dot{
+	border: none;
+	padding: 0;
+	margin: 0;
+	line-height: 0;
+	background-color: transparent;
+	min-width: 0;
+}
+
+.mwt-products-carousel-container .owl-theme .owl-dots {
+    margin-top: 0;
+}
+
+/* cat-layout */
+.mwt-products-carousel-categories-item {
+    position: relative;
+}
+
+.mwt-products-carousel-categories-item .item-media {
+    position: relative;
+}
+
+.mwt-products-carousel-categories-item .item-media::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.mwt-products-carousel-categories-item .item-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mwt-products-carousel-categories-item-title-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    margin: 40px;
+    padding: 15px;
+    text-align: center;
+    z-index: 2;
+}
+
+.mwt-products-carousel-categories-item-title-wrap h6 {
+    margin: 0;
+}

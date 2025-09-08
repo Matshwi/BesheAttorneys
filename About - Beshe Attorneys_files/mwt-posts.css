@@ -1,0 +1,219 @@
+.mwt-posts-article {
+    overflow: hidden;
+}
+
+/* Filter Tabs */
+.mwt-posts-category-tab {
+    display: inline-block;
+}
+
+/* separator */
+.mwt-posts-meta-item:last-child .mwt-posts-separator {
+    display: none;
+}
+
+.mwt-posts-categories a:last-of-type .mwt-posts-category-separator {
+    display: none;
+}
+
+/* media */
+.mwt-posts-media-content {
+    position: relative;
+}
+
+.mwt-posts-article .mwt-posts-thumbnail {
+	overflow: hidden;
+}
+
+.mwt-posts-article .mwt-posts-thumbnail:hover img {
+	opacity: 1;
+}
+
+.mwt-posts-article .mwt-posts-thumbnail:before {
+	content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+	z-index: 1;
+    transition: all .2s linear;
+}
+.mwt-posts-article:hover .mwt-posts-thumbnail:before {
+	opacity: 1;
+}
+
+.mwt-posts-media-content .mwt-posts-categories {
+	position: absolute;
+	z-index: 2;
+}
+
+.mwt-posts-media-content .mwt-posts-categories.position-top-left {
+	top: 0;
+    left: 0;
+    text-align: left;
+}
+
+.mwt-posts-media-content .mwt-posts-categories.position-top-right {
+	top: 0;
+    right: 0;
+    text-align: right;
+}
+
+.mwt-posts-media-content .mwt-posts-categories.position-bottom-left {
+	bottom: 0;
+	left: 0;
+    text-align: left;
+}
+
+.mwt-posts-media-content .mwt-posts-categories.position-bottom-right {
+	bottom: 0;
+	right: 0;
+    text-align: right;
+}
+
+.mwt-posts-media-content .mwt-posts-categories a {
+    display: inline-block;
+}
+
+.mwt-posts-author-avatar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.mwt-posts-author-avatar img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* content */
+.mwt-posts-item-content {
+	position: relative;
+	z-index: 2;
+}
+
+.mwt-posts-title {
+	margin: 0;
+	overflow: hidden;
+}
+
+.mwt-posts-read-more-btn a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* prev/next */
+.mwt-posts-carousel-container .owl-nav {
+    display: flex;
+    z-index: 3;
+}
+
+.mwt-posts-carousel-container .owl-nav button {
+    display: inline-flex;
+}
+
+.mwt-posts-carousel-container svg,
+.mwt-posts-carousel-container i {
+	width: 1em;
+    height: 1em;
+    max-width: 1em;
+    max-height: 1em;
+    display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.mwt-posts-carousel-container .owl-nav button>span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mwt-posts-carousel-container .owl-nav button>span>span {
+	white-space: nowrap;
+}
+
+.mwt-posts-carousel-container {
+    position: relative;
+}
+
+.mwt-posts-carousel-container .owl-nav.position-middle {
+    width: 100%;
+}
+
+.mwt-posts-carousel-container .owl-nav.position-middle button {
+	position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+.mwt-posts-carousel-container .owl-nav.position-middle button.owl-prev {
+	left: 0;
+}
+
+.mwt-posts-carousel-container .owl-nav.position-middle button.owl-next {
+	right: 0;
+}
+
+[class*="mwt-team-carousel-nav-"].disabled {
+	display: none;
+}
+
+[class*="mwt-team-carousel-nav-"] button.disabled {
+	cursor: not-allowed;
+}
+
+/* dots */
+.mwt-posts-carousel-container .owl-carousel .owl-dot{
+	border: none;
+	padding: 0;
+	margin: 0;
+	line-height: 0;
+	background-color: transparent;
+	min-width: 0;
+}
+
+.mwt-posts-carousel-container .owl-theme .owl-dots {
+    margin-top: 0;
+}
+
+/* Grid */
+.mwt-posts-grid img {
+    display: block;
+}
+
+@media (max-width:991px) {
+    .mwt-posts-grid .grid-item.side-item .mwt-posts-article>div {
+        width: 100% !important;
+    }
+}
+
+@media (min-width:992px) {
+    .mwt-posts-grid .grid-item.side-item .mwt-posts-article {
+        display: flex;
+        height: auto;
+    }
+
+    .mwt-posts-grid .grid-item.side-item .mwt-posts-article>div {
+        flex-basis: 50%;
+        width: 50%;
+    }
+
+    .mwt-posts-grid .grid-item.side-item .mwt-posts-article .mwt-posts-thumbnail img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .mwt-posts-grid .grid-item.side-item .mwt-posts-article .mwt-posts-item-content {
+        display: flex;
+        flex-direction: column;
+    }
+}
