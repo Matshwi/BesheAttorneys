@@ -1,0 +1,104 @@
+.mwt-counter-up,
+.mwt-counter-up .mwt-counter-up-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.mwt-counter-up.icon-position-top .mwt-counter-up-wrap {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center !important;
+}
+
+.mwt-counter-up.icon-position-right .mwt-counter-up-wrap {
+    flex-direction: row-reverse;
+    text-align: end;
+}
+
+.mwt-counter-up-icon svg {
+    display: block;
+}
+
+.mwt-counter-up.item-position-left {
+    justify-content: start;
+}
+
+.mwt-counter-up.item-position-center {
+    justify-content: center;
+}
+
+.mwt-counter-up.item-position-right {
+    justify-content: end;
+}
+
+.mwt-counter-up-content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* animation-pattern */
+.mwt-counters-container .mwt-counter-up{
+	position: relative;
+	z-index: 1;
+}
+
+.mwt-counter-up-animation-pattern{
+	position: absolute;
+	top: -15px;
+	left: -15px;
+	width: 60px;
+	height: 40px;
+	z-index: -1;
+	-webkit-transform: translateY(0px) !important;
+	        transform: translateY(0px) !important;
+}
+
+.mwt-counter-up-animation-pattern:after,
+.mwt-counter-up-animation-pattern:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 3px;
+	height: 0;
+	background-color: #000;
+	z-index: -1;
+	transition: 2s all;
+}
+
+.mwt-counter-up-animation-pattern:after{
+	top: auto;
+	left: auto;
+	bottom: 0;
+	right: 0;
+}
+
+.mwt-counter-up-animation-pattern span:after,
+.mwt-counter-up-animation-pattern span:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 3px;
+	background-color: #000;
+	z-index: -1;
+	transition: 1.5s all;
+}
+
+.mwt-counter-up-animation-pattern span:after{
+	top: auto;
+	left: 0;
+	bottom: 0;
+	right: auto;
+}
+
+.mwt-counter-up-animation-pattern.start-pattern-amination:after,
+.mwt-counter-up-animation-pattern.start-pattern-amination:before{
+	height: 40px;
+}
+
+.mwt-counter-up-animation-pattern.start-pattern-amination span:after,
+.mwt-counter-up-animation-pattern.start-pattern-amination span:before{
+	width: 60px;
+}
